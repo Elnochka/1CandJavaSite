@@ -1,0 +1,156 @@
+
+/* Users.css */
+
+.users-page {
+    width: 100%;
+    padding: 24px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.users-page h1 {
+    margin: 0 0 24px;
+    color: #1e293b;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Таблиця */
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.users-table th {
+    padding: 14px 16px;
+    background: #f1f5f9;
+    color: #475569;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table td {
+    padding: 14px 16px;
+    color: #334155;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.users-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Кнопки */
+
+.users-table button,
+.user-edit-form button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #5b9bd5;
+    color: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.users-table button:hover,
+.user-edit-form button:hover {
+    background: #4b64a7;
+}
+
+.user-edit-form button:last-child {
+    background: #64748b;
+}
+
+.user-edit-form button:last-child:hover {
+    background: #475569;
+}
+
+/* Форма редагування */
+
+.user-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+    margin-top: 24px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-edit-form h2 {
+    margin: 0 0 8px;
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user-edit-form input,
+.user-edit-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #334155;
+    font-size: 14px;
+    outline: none;
+}
+
+.user-edit-form input:focus,
+.user-edit-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.user-edit-form button {
+    width: fit-content;
+}
+
+/* Повідомлення про помилку */
+
+.users-error {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    color: #dc2626;
+}
+
+/* Адаптація для маленьких екранів */
+
+@media (max-width: 768px) {
+    .users-page {
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .users-page h1 {
+        font-size: 24px;
+    }
+
+    .users-table {
+        min-width: 700px;
+    }
+
+    .user-edit-form {
+        max-width: 100%;
+    }
+}

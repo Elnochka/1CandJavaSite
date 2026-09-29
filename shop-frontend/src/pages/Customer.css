@@ -1,0 +1,368 @@
+
+.customer-page {
+    width: 100%;
+    min-height: calc(100vh - 55px);
+    box-sizing: border-box;
+
+    padding: 30px 40px;
+
+    background: #f7f9fc;
+}
+
+.customer-content {
+    width: 100%;
+}
+
+.customer-title {
+    margin: 0 0 20px 0;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #243b53;
+}
+
+.details-button {
+    padding: 6px 12px;
+
+    border: 1px solid #1976d2;
+    border-radius: 4px;
+
+    background: white;
+
+    color: #1976d2;
+
+    cursor: pointer;
+}
+
+/* =========================
+   Панель додавання товару
+   ========================= */
+
+.add-panel {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.product-select {
+    flex: 1;
+
+    height: 38px;
+
+    padding: 0 10px;
+
+    font-size: 14px;
+
+    color: #243b53;
+
+    background: #ffffff;
+
+    border: 1px solid #bcccdc;
+    border-radius: 4px;
+
+    outline: none;
+}
+
+.product-select:focus {
+    border-color: #5b9bd5;
+
+    box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.15);
+}
+
+.quantity-input {
+    width: 100px;
+    height: 38px;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    font-size: 14px;
+
+    border: 1px solid #bcccdc;
+    border-radius: 4px;
+
+    outline: none;
+}
+
+.quantity-input:focus {
+    border-color: #5b9bd5;
+
+    box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.15);
+}
+
+
+/* =========================
+   Кнопка додавання
+   ========================= */
+
+.add-button {
+    height: 38px;
+
+    padding: 0 18px;
+
+    border: 1px solid #4a8ac7;
+    border-radius: 4px;
+
+    background: #5b9bd5;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: background 0.15s;
+}
+
+.add-button:hover {
+    background: #4a8ac7;
+}
+
+
+/* =========================
+   Таблиця
+   ========================= */
+
+.order-table-container {
+    width: 100%;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    overflow-x: auto;
+
+    background: white;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.order-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+
+    color: #334e68;
+}
+
+
+/* Заголовок таблиці */
+
+.order-table th {
+    background: #e8f0f7;
+
+    color: #334e68;
+
+    border: 1px solid #cbd5e1;
+
+    padding: 10px 8px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Рядки */
+
+.order-table td {
+    border: 1px solid #d9e2ec;
+
+    padding: 8px;
+
+    text-align: center;
+
+    height: 32px;
+
+    background: #ffffff;
+}
+
+
+/* Hover по рядку */
+
+.order-table tbody tr:hover td {
+    background: #f1f7fc;
+}
+
+
+/* Назва */
+
+.name-column {
+    text-align: left !important;
+}
+
+
+/* Числа */
+
+.number-column {
+    text-align: right !important;
+}
+
+
+/* =========================
+   Кількість
+   ========================= */
+
+.table-quantity {
+    width: 70px;
+
+    padding: 5px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    border: 1px solid #bcccdc;
+    border-radius: 3px;
+
+    outline: none;
+}
+
+.table-quantity:focus {
+    border-color: #5b9bd5;
+
+    box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.15);
+}
+
+
+/* =========================
+   Видалення
+   ========================= */
+
+.delete-button {
+    border: none;
+
+    background: transparent;
+
+    color: #829ab1;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: color 0.15s;
+}
+
+.delete-button:hover {
+    color: #d64545;
+}
+
+
+/* =========================
+   Порожня таблиця
+   ========================= */
+
+.empty-row {
+    height: 100px;
+
+    color: #829ab1;
+
+    text-align: center !important;
+
+    background: #fafcff !important;
+}
+
+
+/* =========================
+   Підсумок
+   ========================= */
+
+.order-table tfoot td {
+    background: #edf2f7;
+
+    color: #243b53;
+
+    font-weight: 600;
+
+    border: 1px solid #cbd5e1;
+
+    padding: 10px;
+}
+
+.total-label {
+    text-align: right !important;
+}
+
+.total-value {
+    text-align: right !important;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   Нижня панель
+   ========================= */
+
+.order-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 16px;
+}
+
+.order-message {
+    font-weight: 600;
+
+    color: #2f855a;
+}
+
+
+/* =========================
+   Створити замовлення
+   ========================= */
+
+.create-order-button {
+    padding: 10px 25px;
+
+    border: 1px solid #3f8f6b;
+    border-radius: 5px;
+
+    background: #48a878;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s,
+        transform 0.05s;
+}
+
+.create-order-button:hover:not(:disabled) {
+    background: #3d966b;
+}
+
+.create-order-button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.create-order-button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.45;
+}

@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0003
+      author: olena
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - or:
+                - tableExists:
+                    tableName: prices
+      changes:
+        - createTable:
+            tableName: prices
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_price
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+      rollback:
+        - delete:
+            tableName: prices

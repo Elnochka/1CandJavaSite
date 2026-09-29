@@ -1,0 +1,239 @@
+
+.orders-page {
+    width: 100%;
+    min-height: calc(100vh - 55px);
+
+    box-sizing: border-box;
+
+    padding: 30px 40px;
+
+    background: #f7f9fc;
+}
+
+.orders-title {
+    margin: 0 0 20px 0;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #243b53;
+}
+
+
+/* Таблиця замовлень */
+
+.orders-table-container {
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    overflow-x: auto;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+
+    color: #334e68;
+}
+
+.orders-table th {
+    padding: 10px 8px;
+
+    background: #e8f0f7;
+
+    border: 1px solid #cbd5e1;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.orders-table td {
+    padding: 9px;
+
+    border: 1px solid #d9e2ec;
+
+    text-align: center;
+
+    background: white;
+}
+
+.orders-table tbody tr {
+    cursor: pointer;
+}
+
+.orders-table tbody tr:hover td {
+    background: #f1f7fc;
+}
+
+.orders-table tbody tr.selected-order td {
+    background: #dceeff;
+}
+
+.order-amount {
+    text-align: right !important;
+
+    font-weight: 600;
+}
+
+
+/* Кнопка перегляду */
+
+.details-button {
+    padding: 6px 12px;
+
+    border: 1px solid #1976d2;
+    border-radius: 4px;
+
+    background: white;
+
+    color: #1976d2;
+
+    cursor: pointer;
+}
+
+.details-button:hover {
+    background: #1976d2;
+
+    color: white;
+}
+
+
+/* Порожній список */
+
+.orders-empty {
+    height: 100px;
+
+    color: #829ab1;
+}
+
+
+/* Помилка */
+
+.orders-error {
+    color: #d64545;
+}
+
+
+/* =========================
+   Деталі замовлення
+   ========================= */
+
+.order-details {
+    margin-top: 25px;
+
+    background: white;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.order-details-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.order-details-header h2 {
+    margin: 0;
+
+    font-size: 19px;
+
+    color: #243b53;
+}
+
+.orders-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.close-button {
+    border: none;
+
+    background: transparent;
+
+    color: #829ab1;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #d64545;
+}
+
+
+/* Товари замовлення */
+
+.order-items-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+.order-items-table th {
+    padding: 9px;
+
+    background: #e8f0f7;
+
+    border: 1px solid #cbd5e1;
+
+    text-align: center;
+}
+
+.order-items-table td {
+    padding: 8px;
+
+    border: 1px solid #d9e2ec;
+
+    text-align: center;
+}
+
+.product-name {
+    text-align: left !important;
+}
+
+.number {
+    text-align: right !important;
+}
+
+.order-items-table tfoot td {
+    background: #edf2f7;
+
+    font-weight: 600;
+
+    border: 1px solid #cbd5e1;
+}
+
+.details-total-label {
+    text-align: right !important;
+}
+
+.details-total {
+    text-align: right !important;
+
+    font-size: 15px;
+}

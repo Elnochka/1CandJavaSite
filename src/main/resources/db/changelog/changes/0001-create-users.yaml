@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001
+      author: olena
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - or:
+                - tableExists:
+                    tableName: users
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column: { name: email, type: VARCHAR(255), constraints: { nullable: false } }
+              - column: { name: password, type: VARCHAR(255), constraints: { nullable: false } }
+              - column: { name: code1c, type: VARCHAR(20), constraints: { nullable: false } }
+              - column: { name: name1c, type: VARCHAR(100), constraints: { nullable: false } }
+              - column: { name: active, type: boolean, defaultValueNumeric: true }
+      rollback:
+        - delete:
+            tableName: users

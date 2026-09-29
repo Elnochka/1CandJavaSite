@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0002
+      author: olena
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - or:
+                - tableExists:
+                    tableName: storages
+      changes:
+        - createTable:
+            tableName: storages
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_storage
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+      rollback:
+        - delete:
+            tableName: storages

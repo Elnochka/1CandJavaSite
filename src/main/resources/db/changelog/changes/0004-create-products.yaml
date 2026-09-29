@@ -1,0 +1,76 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0004
+      author: olena
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - or:
+                - tableExists:
+                    tableName: products
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_code
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: price
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: stock
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: nds
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: sum
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: all_sum
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+
+        - addForeignKeyConstraint:
+            baseTableName: products
+            baseColumnNames: price_id
+            referencedTableName: prices
+            referencedColumnNames: id
+            constraintName: fk_products_prices
+
+      rollback:
+        - delete:
+            tableName: products
