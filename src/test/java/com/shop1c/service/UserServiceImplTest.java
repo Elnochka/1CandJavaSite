@@ -56,13 +56,13 @@ public class UserServiceImplTest {
         assertNotNull(result);
         assertEquals(2, result.size());
 
-        assertEquals(1L, result.get(0).getId());
-        assertEquals("user1@gmail.com", result.get(0).getEmail());
-        assertEquals("C001", result.get(0).getCode1C());
+        assertEquals(1L, result.getFirst().getId());
+        assertEquals("user1@gmail.com", result.getFirst().getEmail());
+        assertEquals("C001", result.getFirst().getCode1C());
         assertEquals("User 1", result.get(0).getName1C());
 
 
-        assertEquals(2L, result.get(1).getId());
+        assertEquals(2L, result.getLast().getId());
         assertEquals("user2@gmail.com", result.get(1).getEmail());
         assertEquals("C002", result.get(1).getCode1C());
         assertEquals("User 2", result.get(1).getName1C());

@@ -1,6 +1,5 @@
 package com.shop1c.service;
 
-import com.shop1c.entity.Order;
 import com.shop1c.entity.dto.OrderRequestDto;
 import com.shop1c.entity.dto.OrderResponseDto;
 

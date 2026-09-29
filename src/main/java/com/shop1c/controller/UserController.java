@@ -4,7 +4,6 @@ import com.shop1c.entity.Users;
 import com.shop1c.entity.dto.UserDto;
 import com.shop1c.entity.dto.UserRequestUpdateDto;
 import com.shop1c.service.UserService;
-import com.shop1c.service.UsersService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

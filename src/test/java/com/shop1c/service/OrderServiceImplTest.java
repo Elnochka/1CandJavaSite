@@ -112,16 +112,16 @@ public class OrderServiceImplTest {
         assertThat(result)
                 .hasSize(1);
 
-        assertThat(result.get(0).getId())
+        assertThat(result.getFirst().getId())
                 .isEqualTo(10L);
 
-        assertThat(result.get(0).getCustomerId())
+        assertThat(result.getFirst().getCustomerId())
                 .isEqualTo(customerId);
 
-        assertThat(result.get(0).getCustomerCode())
+        assertThat(result.getFirst().getCustomerCode())
                 .isEqualTo("CUST001");
 
-        assertThat(result.get(0).getTotalAmount())
+        assertThat(result.getFirst().getTotalAmount())
                 .isEqualByComparingTo("150");
 
         verify(orderRepository)
